@@ -1,7 +1,6 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
-let emails = "ron.nahmias2@gmail.com,yuvalamit28@gmail.com";
-const authEmails = emails.split(",").map((email) => email.trim());
+const authEmails = process.env.AUTH_EMAILS!.split(",");
 
 export const configAuth = {
   providers: [
