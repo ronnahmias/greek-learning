@@ -1,21 +1,16 @@
-import { Box, Button, TextField } from "@mui/material";
-import { useFormik } from "formik";
+"use client";
+import { Box, Button } from "@mui/material";
+import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 export default function LoginForm() {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-    },
-    validationSchema: {},
-    onSubmit: async (values, { setFieldError }) => {
-      return false;
-    },
-  });
-
+  function handleLogin() {
+    console.log("handleLogin");
+    signIn("google");
+  }
   return (
     <>
       <Box
-        component="form"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -23,32 +18,23 @@ export default function LoginForm() {
           width: "100%",
         }}
       >
-        <TextField
-          placeholder="האימייל שאיתו נרשמת"
-          variant="outlined"
-          fullWidth
-          type="email"
-          label="אימייל"
-          name="email"
-          sx={{
-            mt: 4,
-            "& fieldset": {
-              borderRadius: "17px",
-            },
-          }}
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
         <Button
           variant="contained"
+          onClick={handleLogin}
           color="secondary"
-          sx={{ width: "60%", my: 5 }}
+          sx={{ width: "40%", my: 5 }}
           size="large"
-          type="submit"
+          type="button"
+          startIcon={
+            <Image
+              src="/images/google-icon.png"
+              alt="logo"
+              width={20}
+              height={20}
+            />
+          }
         >
-          שלחו לי קוד אימות
+          התחברות
         </Button>
       </Box>
     </>

@@ -31,10 +31,6 @@ export default function LoginPage() {
           ברוך הבא
         </Typography>
 
-        <Typography variant="subtitle2" component="h2">
-          התחבר עם המייל שלך
-        </Typography>
-
         <Divider sx={{ my: 2 }} />
       </Box>
       <LoginForm />
