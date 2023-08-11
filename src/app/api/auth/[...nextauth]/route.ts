@@ -1,7 +1,7 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 
-const authEmails = "ron.nahmias2@gmail.com, yuvalamit28@gmail.com";
+const authEmails = process.env.AUTH_EMAILS!.split(",");
 
 export const configAuth = {
   providers: [
@@ -15,26 +15,12 @@ export const configAuth = {
     signIn: "/login",
   },
   callbacks: {
-    async signIn({
-      user,
-      account,
-      profile,
-      email,
-      credentials,
-    }: {
-      account: any;
-      profile: any;
-      email: any;
-      credentials: any;
-      user: any;
-    }) {
-      if (account.provider === "google") {
-        const email = profile.email;
-        if (authEmails.includes(email)) {
-          return true;
-        }
+    async signIn({ user, account, profile, email, credentials }: any) {
+      if (account.provider === "google" && authEmails.includes(email)) {
+        return true;
+      } else {
+        return false;
       }
-      return false;
     },
   },
 };
