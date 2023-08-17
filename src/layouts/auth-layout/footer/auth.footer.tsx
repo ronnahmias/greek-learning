@@ -1,47 +1,18 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
-
 export default function AuthFooter() {
   return (
-    <Box
-      sx={{
-        position: "fixed",
-        bottom: 25,
-        left: 20,
-        right: 20,
-        padding: "8px",
-        backgroundColor: "#EEF2F6",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{
-          width: "100%",
-          maxWidth: { xs: "100%", md: "100%" },
-        }}
-      >
-        <Typography
-          variant="subtitle2"
-          component={Link}
+    <footer className="fixed bottom-5 left-20 right-20 p-2 bg-gray-100 flex justify-center">
+      <div className="w-full max-w-full md:max-w-full flex flex-row items-center justify-between">
+        <a
           href="tel:+972522600235"
           target="_blank"
-          underline="hover"
+          className="text-sm hover:underline hover:text-blue-500"
         >
           Contact Me
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          component={Link}
-          href="/"
-          target="_blank"
-          underline="hover"
-        >
+        </a>
+        <a href="/" className="text-sm hover:underline hover:text-blue-500">
           &copy; Juliana Nahmias
-        </Typography>
-      </Stack>
-    </Box>
+        </a>
+      </div>
+    </footer>
   );
 }

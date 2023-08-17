@@ -1,13 +1,14 @@
-"use client";
-import { Typography } from "@mui/material";
-import { useSession } from "next-auth/react";
+import { configAuth } from "@/app/api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
 
-export default function DashboardPage() {
-  const session = useSession();
+export default async function DashboardPage() {
+  const session = await getServerSession(configAuth);
+  console.log("session dashboard", session?.user?.name);
+
   return (
     <>
-      <Typography variant="h3">Dashboard</Typography>
-      <Typography variant="h6">Welcome {session?.data?.user?.name}</Typography>
+      <h3 className="text-3xl font-bold text-center">Dashboard</h3>
+      <h6 className="text-lg text-end">Welcome {session?.user?.name}</h6>
     </>
   );
 }

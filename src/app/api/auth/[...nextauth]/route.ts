@@ -14,17 +14,16 @@ export const configAuth = {
     signIn: "/login",
   },
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }: any) {
-      console.log(account.provider);
-
-      if (account.provider == "google") {
-        if (authEmails.includes(profile.email)) {
-          return true;
-        }
-        return false;
-      }
-      return false;
-    },
+    // async signIn({ user, account, profile, email, credentials }: any) {
+    //   console.log(account.provider);
+    //   if (account.provider == "google") {
+    //     if (authEmails.includes(profile.email)) {
+    //       return true;
+    //     }
+    //     return false;
+    //   }
+    //   return false;
+    // },
   },
 };
 const handler = NextAuth(configAuth);

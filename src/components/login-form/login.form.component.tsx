@@ -1,5 +1,4 @@
 "use client";
-import { Box, Button } from "@mui/material";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
 
@@ -10,33 +9,22 @@ export default function LoginForm() {
   }
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <Button
-          variant="contained"
+      <div className="flex flex-col items-center w-full">
+        <button
+          className="w-40 my-5 bg-blue-600 text-white rounded-lg py-2 px-4 flex items-center justify-center"
           onClick={handleLogin}
-          color="secondary"
-          sx={{ width: "40%", my: 5 }}
-          size="large"
           type="button"
-          startIcon={
-            <Image
-              src="/images/google-icon.png"
-              alt="logo"
-              width={20}
-              height={20}
-            />
-          }
         >
+          <Image
+            src="/images/google-icon.png"
+            alt="logo"
+            className="ml-2"
+            width={20}
+            height={20}
+          />
           התחברות
-        </Button>
-      </Box>
+        </button>
+      </div>
     </>
   );
 }

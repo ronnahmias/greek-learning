@@ -1,4 +1,3 @@
-import { RtlCacheProvider } from "@/components/RTL/rtl.component";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -22,9 +21,7 @@ export default async function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <body className={inter.className}>
-        <SessionProvider session={session}>
-          <RtlCacheProvider>{children}</RtlCacheProvider>
-        </SessionProvider>
+        <SessionProvider session={session}>{children}</SessionProvider>
       </body>
     </html>
   );

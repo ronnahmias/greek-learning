@@ -1,5 +1,4 @@
 import AuthFooter from "@/layouts/auth-layout/footer/auth.footer";
-import { Box } from "@mui/material";
 import { getServerSession } from "next-auth";
 import { configAuth } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
@@ -15,20 +14,10 @@ export default async function AuthLayout({
   }
   return (
     <>
-      <Box
-        sx={{
-          backgroundColor: "#EEF2F6",
-          minHeight: "100vh",
-          minWidth: "100vw",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <main className="min-h-screen min-w-screen bg-gray-100 flex flex-col items-center justify-center">
         {children}
-        <AuthFooter />
-      </Box>
+      </main>
+      <AuthFooter />
     </>
   );
 }

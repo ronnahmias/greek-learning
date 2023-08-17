@@ -1,15 +1,21 @@
 import { Header } from "@/components/Header/header.component";
-import { Box } from "@mui/material";
+import { getServerSession } from "next-auth";
 
-export default function MainLayout({
+import { configAuth } from "../api/auth/[...nextauth]/route";
+import SessionProvider from "@/components/session-provider/session.provider.component";
+
+export default async function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession(configAuth);
   return (
     <>
-      <Header />
-      {children}
+      <SessionProvider session={session}>
+        <Header />
+        {children}
+      </SessionProvider>
     </>
   );
 }

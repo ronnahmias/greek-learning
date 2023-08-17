@@ -1,39 +1,21 @@
 "use client";
 import LoginForm from "@/components/login-form/login.form.component";
-import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <Box
-      sx={{
-        width: 350,
-        borderRadius: 6,
-        backgroundColor: "#ffffff",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        px: 4,
-        py: 2,
-      }}
-    >
-      <Box
-        textAlign="center"
-        sx={{ minHeight: "170px", display: "flex", alignItems: "center" }}
-      >
+    <section className="w-1/2 rounded-lg bg-white flex flex-col items-center px-4 py-2">
+      <div className="text-center min-h-200 flex items-center mt-10">
         <Link href="/">
           <Image src="/images/logo.png" alt="logo" width={150} height={150} />
         </Link>
-      </Box>
-      <Box textAlign="center" sx={{ mt: 2 }}>
-        <Typography variant="h5" component="h1">
-          ברוך הבא
-        </Typography>
-
-        <Divider sx={{ my: 2 }} />
-      </Box>
+      </div>
+      <div className="text-center mt-2">
+        <h5 className="text-xl font-bold">ברוכה הבא</h5>
+        <hr className="my-2" />
+      </div>
       <LoginForm />
-    </Box>
+    </section>
   );
 }
