@@ -1,11 +1,17 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import SessionProvider from "@/components/session-provider/session.provider.component";
 import { getServerSession } from "next-auth";
 import { configAuth } from "./api/auth/[...nextauth]/route";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({
+  subsets: ["latin", "hebrew"],
+  variable: "--font-rubik",
+});
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Greek - E-Learning",
@@ -19,8 +25,8 @@ export default async function RootLayout({
 }) {
   const session = await getServerSession(configAuth);
   return (
-    <html lang="he" dir="rtl">
-      <body className={inter.className}>
+    <html lang="he" dir="rtl" suppressHydrationWarning={true}>
+      <body className={`min-h-screen m-0 ${rubik.className} ${inter.variable}`}>
         <SessionProvider session={session}>{children}</SessionProvider>
       </body>
     </html>

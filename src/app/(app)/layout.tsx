@@ -12,10 +12,8 @@ export default async function MainLayout({
   const session = await getServerSession(configAuth);
   return (
     <>
-      <SessionProvider session={session}>
-        <Header />
-        {children}
-      </SessionProvider>
+      <Header />
+      {children}
     </>
   );
 }
