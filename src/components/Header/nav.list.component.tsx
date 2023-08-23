@@ -28,7 +28,7 @@ const navListItems = [
   },
 ];
 
-export function NavList() {
+function NavList() {
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       {navListItems.map(({ label, icon, href }, key) => (
@@ -49,3 +49,5 @@ export function NavList() {
     </ul>
   );
 }
+
+export default NavList;

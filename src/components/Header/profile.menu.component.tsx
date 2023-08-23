@@ -12,7 +12,7 @@ import { ChevronDownIcon, PowerIcon } from "@heroicons/react/24/outline";
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 
-export function ProfileMenu() {
+function ProfileMenu() {
   const profileMenuItems = [
     {
       label: "התנתק",
@@ -86,3 +86,5 @@ export function ProfileMenu() {
     </Menu>
   );
 }
+
+export default ProfileMenu;

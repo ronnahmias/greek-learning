@@ -7,10 +7,10 @@ import {
   Typography,
 } from "@/components/material/import.material.tailwind";
 import { Bars2Icon } from "@heroicons/react/24/outline";
-import { ProfileMenu } from "./profile.menu.component";
-import { NavList } from "./nav.list.component";
+import ProfileMenu from "./profile.menu.component";
+import NavList from "./nav.list.component";
 
-export function Header() {
+function Header() {
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -46,3 +46,5 @@ export function Header() {
     </header>
   );
 }
+
+export default Header;
