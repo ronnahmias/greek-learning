@@ -1,6 +1,6 @@
-import AuthFooter from "@/layouts/auth-layout/footer/auth.footer";
+import AuthFooter from "@/components/footer/auth.footer";
+import { configAuth } from "@/lib/auth/auth";
 import { getServerSession } from "next-auth";
-import { configAuth } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 
 export default async function AuthLayout({

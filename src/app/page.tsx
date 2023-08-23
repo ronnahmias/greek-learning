@@ -1,4 +1,4 @@
-import AuthFooter from "@/layouts/auth-layout/footer/auth.footer";
+import AuthFooter from "@/components/footer/auth.footer";
 import Image from "next/image";
 import Link from "next/link";
 
