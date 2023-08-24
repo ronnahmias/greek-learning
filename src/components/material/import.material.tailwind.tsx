@@ -12,6 +12,16 @@ import {
   Typography,
   IconButton,
   Collapse,
+  Card,
+  CardHeader,
+  Input,
+  CardBody,
+  Chip,
+  CardFooter,
+  Tabs,
+  TabsHeader,
+  Tab,
+  Tooltip,
 } from "@material-tailwind/react";
 
 export {
@@ -26,4 +36,14 @@ export {
   Typography,
   IconButton,
   Collapse,
+  Card,
+  CardHeader,
+  Input,
+  CardBody,
+  Chip,
+  CardFooter,
+  Tabs,
+  TabsHeader,
+  Tab,
+  Tooltip,
 };
