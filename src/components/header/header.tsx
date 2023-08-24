@@ -1,23 +1,22 @@
-// "use client";
-// import { useState } from "react";
-// import {
-//   IconButton,
-//   Collapse,
-//   Navbar,
-//   Typography,
-// } from "@/components/material/import.material.tailwind";
-// import { Bars2Icon } from "@heroicons/react/24/outline";
-// import ProfileMenu from "./profile.menu.component";
-// import NavList from "./nav.list.component";
+"use client";
+import { useState } from "react";
+import {
+  IconButton,
+  Collapse,
+  Navbar,
+  Typography,
+} from "@/components/material/import.material.tailwind";
+import { Bars2Icon } from "@heroicons/react/24/outline";
+import NavList from "./nav.list";
+import ProfileMenu from "./profile.menu";
 
 export default function Header() {
-  // const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
-  // const [isNavOpen, setIsNavOpen] = useState(false);
+  const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <header>
-      <h1>header</h1>
-      {/* <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="relative mx-auto flex items-center text-blue-gray-900">
           <Typography
             as="a"
@@ -43,7 +42,7 @@ export default function Header() {
         <Collapse open={isNavOpen}>
           <NavList />
         </Collapse>
-      </Navbar> */}
+      </Navbar>
     </header>
   );
 }
