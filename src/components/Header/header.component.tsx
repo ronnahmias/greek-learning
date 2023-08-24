@@ -2,7 +2,7 @@
 import { useState } from "react";
 import {
   IconButton,
-  MobileNav,
+  Collapse,
   Navbar,
   Typography,
 } from "@/components/material/import.material.tailwind";
@@ -39,9 +39,9 @@ function Header() {
           </IconButton>
           <ProfileMenu />
         </div>
-        <MobileNav open={isNavOpen} className="overflow-scroll">
+        <Collapse open={isNavOpen}>
           <NavList />
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </header>
   );

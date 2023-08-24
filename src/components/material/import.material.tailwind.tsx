@@ -11,7 +11,7 @@ import {
   Avatar,
   Typography,
   IconButton,
-  MobileNav,
+  Collapse,
 } from "@material-tailwind/react";
 
 export {
@@ -25,5 +25,5 @@ export {
   Navbar,
   Typography,
   IconButton,
-  MobileNav,
+  Collapse,
 };
