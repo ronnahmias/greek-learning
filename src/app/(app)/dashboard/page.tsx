@@ -1,8 +1,7 @@
-import { configAuth } from "@/lib/auth/auth";
-import { getServerSession } from "next-auth";
+import { getAuthSession } from "@lib/auth/auth";
 
 export default async function DashboardPage() {
-  const session = await getServerSession(configAuth);
+  const session = await getAuthSession();
   console.log("session dashboard", session?.user?.name);
 
   return (

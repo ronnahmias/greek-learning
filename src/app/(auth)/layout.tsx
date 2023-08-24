@@ -1,6 +1,5 @@
 import AuthFooter from "@/components/footer/auth.footer";
-import { configAuth } from "@/lib/auth/auth";
-import { getServerSession } from "next-auth";
+import { getAuthSession } from "@/lib/auth/auth";
 import { redirect } from "next/navigation";
 
 export default async function AuthLayout({
@@ -8,7 +7,7 @@ export default async function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(configAuth);
+  const session = await getAuthSession();
   if (session) {
     redirect("/dashboard");
   }

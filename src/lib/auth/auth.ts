@@ -3,6 +3,7 @@ import { apiServer } from "../axios/axios";
 import { connectMongoDB } from "../mongodb/mongodb";
 import { User } from "../users/user";
 import { checkUserAdmin } from "./user_admins";
+import { getServerSession } from "next-auth";
 
 export const configAuth = {
   providers: [
@@ -33,3 +34,5 @@ export const configAuth = {
     },
   },
 };
+
+export const getAuthSession = () => getServerSession(configAuth);

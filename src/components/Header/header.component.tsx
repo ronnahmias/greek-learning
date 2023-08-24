@@ -10,7 +10,7 @@
 // import ProfileMenu from "./profile.menu.component";
 // import NavList from "./nav.list.component";
 
-export default async function Header() {
+const Header = () => {
   // const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
   // const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -46,4 +46,6 @@ export default async function Header() {
       </Navbar> */}
     </header>
   );
-}
+};
+
+export default Header;
