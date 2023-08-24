@@ -1,4 +1,4 @@
-import Header from "../../components/header/header.component";
+import AuthFooter from "@components/footer/auth.footer";
 
 export default async function MainLayout({
   children,
@@ -7,7 +7,7 @@ export default async function MainLayout({
 }) {
   return (
     <>
-      <Header />
+      <AuthFooter />
       {children}
     </>
   );
