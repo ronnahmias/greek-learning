@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <header>
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      {/* <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="relative mx-auto flex items-center text-blue-gray-900">
           <Typography
             as="a"
@@ -42,7 +42,7 @@ function Header() {
         <Collapse open={isNavOpen}>
           <NavList />
         </Collapse>
-      </Navbar>
+      </Navbar> */}
     </header>
   );
 }
