@@ -7,7 +7,7 @@ export default async function MainLayout({
 }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {children}
     </>
   );
