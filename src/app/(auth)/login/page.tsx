@@ -1,5 +1,5 @@
 "use client";
-import LoginForm from "@/components/login-form/login.form.component";
+import LoginForm from "@components/login-form/login.form";
 import Image from "next/image";
 import Link from "next/link";
 
