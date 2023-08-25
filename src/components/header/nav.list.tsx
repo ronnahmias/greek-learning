@@ -44,12 +44,10 @@ const navListItems: NavListItem[] = [
 
 function NavList() {
   const path = usePathname();
-  console.log(path);
-
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       {navListItems.map(({ label, icon, href, disabled }, key) => {
-        const isActive = path === href;
+        const isActive = path.includes(href);
         return (
           <Link
             href={href}

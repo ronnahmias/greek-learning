@@ -22,11 +22,17 @@ import {
   TabsHeader,
   Tab,
   Tooltip,
+  TabsBody,
+  TabPanel,
+  Select,
+  Option,
 } from "@material-tailwind/react";
 
 export {
   ThemeProvider,
   Menu,
+  Select,
+  Option,
   MenuList,
   MenuItem,
   Avatar,
@@ -46,4 +52,6 @@ export {
   TabsHeader,
   Tab,
   Tooltip,
+  TabsBody,
+  TabPanel,
 };
