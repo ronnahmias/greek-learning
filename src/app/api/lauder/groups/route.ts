@@ -1,9 +1,9 @@
 import { LauderGroups } from "@lib/lauderLessons/lauderGroups";
 import { connectMongoDB } from "@lib/mongodb/mongodb";
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: Request | NextRequest, res: NextApiResponse) {
   await connectMongoDB();
   const lauderGroups = await LauderGroups.find();
   return NextResponse.json(lauderGroups);
