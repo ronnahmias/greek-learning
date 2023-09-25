@@ -9,7 +9,7 @@ export default function Home() {
         <div className="text-center mt-2">
           <Link href="/">
             <Image
-              src="/images/logo.png"
+              src="/images/e-logo.png"
               alt="logo"
               width={150}
               height={150}

@@ -8,7 +8,7 @@ export default function LoginPage() {
     <section className="w-1/2 rounded-lg bg-white flex flex-col items-center px-4 py-2">
       <div className="text-center min-h-200 flex items-center mt-10">
         <Link href="/">
-          <Image src="/images/logo.png" alt="logo" width={150} height={150} />
+          <Image src="/images/e-logo.png" alt="logo" width={150} height={150} />
         </Link>
       </div>
       <div className="text-center mt-2">
