@@ -1,5 +1,4 @@
 import GoogleProvider from "next-auth/providers/google";
-import { apiServer } from "../axios/axios";
 import { connectMongoDB } from "../mongodb/mongodb";
 import { User } from "../users/user";
 import { checkUserAdmin } from "./user_admins";
@@ -18,6 +17,8 @@ export const configAuth = {
   },
   callbacks: {
     async signIn({ user, account }: any) {
+      console.log("signIn", user, account);
+
       if (account.provider === "google") {
         const hasAccess = await checkUserAdmin(user.email);
         if (!hasAccess) {

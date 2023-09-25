@@ -1,15 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Rubik } from "next/font/google";
+// import { Inter } from "next/font/google";
+// import { rubik } from "next/font/google";
 import { NextAuthProvider } from "@/components/providers/next.auth.provider";
 
-const rubik = Rubik({
-  subsets: ["latin", "hebrew"],
-  variable: "--font-rubik",
-});
+// const rubik = Rubik({
+//   subsets: ["latin", "hebrew"],
+//   variable: "--font-rubik",
+// });
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Greek - E-Learning",
@@ -23,7 +23,8 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="he" dir="rtl" suppressHydrationWarning={true}>
-      <body className={`min-h-screen m-0 ${rubik.className} ${inter.variable}`}>
+      {/* ${rubik.className} ${inter.variable} */}
+      <body className={`min-h-screen m-0 `}>
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>
