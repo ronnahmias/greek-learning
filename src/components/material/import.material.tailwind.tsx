@@ -26,6 +26,7 @@ import {
   TabPanel,
   Select,
   Option,
+  Spinner,
 } from "@material-tailwind/react";
 
 export {
@@ -53,5 +54,6 @@ export {
   Tab,
   Tooltip,
   TabsBody,
+  Spinner,
   TabPanel,
 };

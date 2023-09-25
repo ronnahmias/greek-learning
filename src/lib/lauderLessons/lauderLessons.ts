@@ -1,6 +1,7 @@
+import { ILauderLesson } from "@lib/interfaces/lauderLessons";
 import mongoose, { Schema, models } from "mongoose";
 
-const lauderLessonsSchema = new Schema(
+const lauderLessonsSchema = new Schema<ILauderLesson>(
   {
     group: {
       type: Schema.Types.ObjectId,
@@ -29,4 +30,5 @@ const lauderLessonsSchema = new Schema(
 );
 
 export const LauderLessons =
-  models.LauderLessons || mongoose.model("lauder_lessons", lauderLessonsSchema);
+  models.lauder_lessons ||
+  mongoose.model("lauder_lessons", lauderLessonsSchema);

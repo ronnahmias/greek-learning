@@ -17,8 +17,6 @@ export const configAuth = {
   },
   callbacks: {
     async signIn({ user, account }: any) {
-      console.log("signIn", user, account);
-
       if (account.provider === "google") {
         const hasAccess = await checkUserAdmin(user.email);
         if (!hasAccess) {
